@@ -1,0 +1,47 @@
+/* Extended styles: navigation, icons, animations, light/dark themes */
+:root{
+  --max-w:920px;
+  --muted:#6b7280;
+  --accent:#0b5fff;
+  --bg:#ffffff;
+  --text:#111827;
+  --card:#ffffff;
+}
+[data-theme="dark"]{
+  --bg:#0b1220;
+  --text:#e6eef8;
+  --card:#071022;
+  --muted:#93a0b4;
+  --accent:#6fb6ff;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+.site{max-width:var(--max-w);margin:2.2rem auto;padding:0 1rem}
+.top-row{display:flex;align-items:center;gap:1rem}
+.brand{margin:0;font-size:1.4rem}
+.brand a{color:var(--text);text-decoration:none}
+nav.nav{display:flex;gap:0.25rem;flex:1}
+.nav-item{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .6rem;border-radius:8px;color:var(--muted);text-decoration:none;transition:all .18s ease}
+.nav-item .icon{width:18px;height:18px;fill:currentColor;opacity:.9}
+.nav-item:hover{background:rgba(11,95,255,0.06);color:var(--accent);transform:translateY(-2px)}
+.nav-label{font-size:0.95rem}
+.controls{display:flex;gap:.4rem}
+.ctrl-btn{background:transparent;border:1px solid transparent;padding:.35rem;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center}
+.ctrl-btn .icon{width:18px;height:18px}
+.ctrl-btn:hover{background:rgba(0,0,0,0.04)}
+header hr{border:none;border-top:1px solid rgba(0,0,0,0.06);margin:0.8rem 0}
+main{line-height:1.72;min-height:40vh;transition:opacity .28s ease, transform .28s ease}
+main.fade-out{opacity:0;transform:translateY(8px)}
+main.fade-in{opacity:1;transform:none}
+.article-meta{color:var(--muted);font-size:0.95rem;margin-bottom:1rem}
+.post-list li{margin:.35rem 0}
+.tag{display:inline-block;background:rgba(14,104,255,0.08);color:var(--accent);padding:.15rem .4rem;border-radius:4px;margin-right:.3rem;font-size:.85rem}
+/* Home variant styles */
+.home-variants{display:flex;gap:1rem}
+.home-variant{flex:1;padding:.8rem;border-radius:10px;background:var(--card);box-shadow:0 1px 0 rgba(0,0,0,0.03)}
+.home-variant.hidden{display:none}
+/* Small responsive tweaks */
+@media (max-width:720px){
+  .top-row{flex-direction:column;align-items:flex-start}
+  nav.nav{order:3;flex-wrap:wrap}
+}

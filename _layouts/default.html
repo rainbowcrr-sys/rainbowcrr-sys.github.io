@@ -1,36 +1,47 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title | default: site.title }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-      :root{--max-w:780px;--muted:#6b7280}
-      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;color:#111;background:#fff}
-      .site{max-width:var(--max-w);margin:2rem auto;padding:0 1rem}
-      header h1{margin:.25rem 0}
-      nav{color:var(--muted);font-size:0.95rem}
-      main{line-height:1.6}
-      pre, code{background:#f3f4f6;padding:.2rem .4rem;border-radius:4px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Helvetica Neue", monospace}
-      footer{color:var(--muted);font-size:0.9rem;margin-top:2rem}
-      a{color:#0b5fff}
-      hr{border:none;border-top:1px solid #e6e6e6;margin:1rem 0}
-    </style>
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/icons/favicon.svg' | relative_url }}" type="image/svg+xml">
   </head>
   <body>
-    <div class="site">
+    <div class="site" id="site-root">
       <header>
-        <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-        <nav><a href="{{ '/tutorials/' | relative_url }}">Tutorials</a> | <a href="{{ '/about/' | relative_url }}">About</a></nav>
+        <div class="top-row">
+          <h1 class="brand"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+          <nav class="nav" role="navigation" aria-label="Main navigation">
+            {% for item in site.navigation %}
+              <a class="nav-item" href="{{ item.url | relative_url }}">
+                <svg class="icon" aria-hidden="true"><use xlink:href="{{ '/assets/icons/icons.svg#' | relative_url }}{{ item.title | downcase | replace: ' ', '-' }}"></use></svg>
+                <span class="nav-label">{{ item.title }}</span>
+              </a>
+            {% endfor %}
+          </nav>
+          <div class="controls">
+            <button id="homepage-toggle" class="ctrl-btn" aria-label="Toggle homepage layout">
+              <svg class="icon"><use xlink:href="{{ '/assets/icons/icons.svg#swap' | relative_url }}"></use></svg>
+            </button>
+            <button id="theme-toggle" class="ctrl-btn" aria-label="Toggle theme">
+              <svg class="icon" id="theme-icon"><use xlink:href="{{ '/assets/icons/icons.svg#moon' | relative_url }}"></use></svg>
+            </button>
+          </div>
+        </div>
         <hr>
       </header>
-      <main>
+
+      <main id="main-content">
         {{ content }}
       </main>
+
       <footer>
         <hr>
-        <small>© {{ site.time | date: "%Y" }} RainbowCRR</small>
+        <small>© {{ site.time | date: "%Y" }} RainbowCRR — {{ site.description }}</small>
       </footer>
     </div>
+
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   </body>
 </html>

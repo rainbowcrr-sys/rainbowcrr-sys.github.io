@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="tutorials" viewBox="0 0 24 24"><path d="M3 5h18v2H3zM3 10h18v2H3zM3 15h12v2H3z"/></symbol>
+  <symbol id="blog" viewBox="0 0 24 24"><path d="M4 4h16v12H4zM4 18h8v2H4z"/></symbol>
+  <symbol id="about" viewBox="0 0 24 24"><path d="M12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2c-3 0-5 1.5-5 3v1h10v-1c0-1.5-2-3-5-3z"/></symbol>
+  <symbol id="moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+  <symbol id="sun" viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10-9h2V1h-2v3zm7.03 2.05l1.79-1.8-1.79-1.79-1.8 1.79 1.8 1.8zM17.24 19.16l1.8 1.79 1.79-1.79-1.8-1.8-1.79 1.8zM20 13h3v-2h-3v2zM12 19a7 7 0 1 1 0-14 7 7 0 0 1 0 14zM4.21 17.36l-1.8 1.79 1.79 1.79 1.8-1.8-1.79-1.78z"/></symbol>
+  <symbol id="swap" viewBox="0 0 24 24"><path d="M16 17l5-5-5-5v3H8v4h8v3zM8 7l-5 5 5 5v-3h8V10H8V7z"/></symbol>
+  <symbol id="favicon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></symbol>
+</svg>
