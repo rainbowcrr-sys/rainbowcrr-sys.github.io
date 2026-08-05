@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Enhancer — Cleaner Search, Instantly</title>
+    <meta name="description" content="Highlight keywords, label result types, and hide ads on Google / Bing / Baidu. 在 Google / Bing / 百度上高亮关键词、标注结果类型、隐藏广告。">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🔍</span>
+                <span class="logo-text">Search Enhancer</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features / 功能</a>
+                <a href="#install">Install / 安装</a>
+                <a href="#labels">Labels / 标签</a>
+                <a href="#permissions">Privacy / 隐私</a>
+                <a href="https://github.com/rainbowcrr-sys/search-enhancer" target="_blank" rel="noopener" class="nav-github">GitHub</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                v0.1.x · MIT License · 2026
+            </div>
+            <h1 class="hero-title">
+                Cleaner search.<br>
+                <span class="gradient-text">Instantly.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Highlight keywords, label result types, and hide ads on Google / Bing / Baidu.<br>
+                在 Google / Bing / 百度上高亮关键词、标注结果类型、隐藏广告。
+            </p>
+            <div class="hero-actions">
+                <a href="https://github.com/rainbowcrr-sys/search-enhancer/releases" target="_blank" rel="noopener" class="btn btn-primary">
+                    Download / 下载
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <!-- GitHub Star Button -->
+                <a href="https://github.com/rainbowcrr-sys/search-enhancer" target="_blank" rel="noopener" class="github-star-btn" id="starBtn">
+                    <span class="star-left">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        Star
+                    </span>
+                    <span class="star-divider"></span>
+                    <span class="star-count" id="starCount">...</span>
+                </a>
+            </div>
+            <div class="hero-meta">
+                <span class="meta-item">
+                    <span class="meta-dot official"></span>
+                    No tracking / 无追踪
+                </span>
+                <span class="meta-item">
+                    <span class="meta-dot scholar"></span>
+                    Local storage only / 仅本地存储
+                </span>
+                <span class="meta-item">
+                    <span class="meta-dot video"></span>
+                    Open source / 开源
+                </span>
+            </div>
+        </div>
+        <!-- Decorative gradient orb -->
+        <div class="hero-orb"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Features / 功能特性</span>
+                <h2 class="section-title">Everything you need<br>to read search results faster</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;">🎯</div>
+                    <h3>Keyword Highlighting</h3>
+                    <p class="feature-desc-en">Your search terms are automatically wrapped for instant visual scanning.</p>
+                    <p class="feature-desc-zh">搜索词自动高亮包裹，一眼定位答案。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(168,85,247,0.1); color: #a855f7;">🔖</div>
+                    <h3>Result Type Labels</h3>
+                    <p class="feature-desc-en">A colored dot beside each result tells you what it is at a glance.</p>
+                    <p class="feature-desc-zh">每条结果旁彩色圆点，一眼看出是什么类型。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(239,68,68,0.1); color: #ef4444;">🚫</div>
+                    <h3>Ad Detection & Collapse</h3>
+                    <p class="feature-desc-en">Built-in selectors + keyword fallback + your own custom rules.</p>
+                    <p class="feature-desc-zh">内置选择器 + 关键词兜底 + 自定义规则。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(14,165,233,0.1); color: #0ea5e9;">🔘</div>
+                    <h3>Custom Dot Size</h3>
+                    <p class="feature-desc-en">Slider from 4 to 24 px with live preview in the options page.</p>
+                    <p class="feature-desc-zh">4–24 px 滑块调节，选项页实时预览。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(249,115,22,0.1); color: #f97316;">🎨</div>
+                    <h3>Custom Colors</h3>
+                    <p class="feature-desc-en">Pick any color for each label type, saved locally.</p>
+                    <p class="feature-desc-zh">每种标签颜色随意改，本地保存即时生效。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(156,163,175,0.1); color: #6b7280;">🌐</div>
+                    <h3>Multi-Engine Support</h3>
+                    <p class="feature-desc-en">Google, Bing, Baidu — more engines coming soon.</p>
+                    <p class="feature-desc-zh">Google、Bing、百度，更多引擎持续增加中。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Install Section -->
+    <section class="section section-alt" id="install">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Install / 安装</span>
+                <h2 class="section-title">Get up and running<br>in 5 steps</h2>
+            </div>
+            <div class="install-grid">
+                <div class="install-col">
+                    <h3 class="install-title">English</h3>
+                    <ol class="install-steps">
+                        <li>Download the latest <code>search-enhancer-vX.Y.Z.zip</code> from <a href="https://github.com/rainbowcrr-sys/search-enhancer/releases" target="_blank" rel="noopener">Releases</a></li>
+                        <li>Unzip the folder</li>
+                        <li>Open <code>chrome://extensions</code> (or <code>edge://extensions</code>)</li>
+                        <li>Enable <strong>Developer Mode</strong></li>
+                        <li>Click <strong>Load unpacked</strong> → select the unzipped folder</li>
+                    </ol>
+                </div>
+                <div class="install-col">
+                    <h3 class="install-title">中文</h3>
+                    <ol class="install-steps">
+                        <li>从 <a href="https://github.com/rainbowcrr-sys/search-enhancer/releases" target="_blank" rel="noopener">Releases</a> 下载最新 <code>search-enhancer-vX.Y.Z.zip</code></li>
+                        <li>解压文件夹</li>
+                        <li>打开 <code>chrome://extensions</code>（或 <code>edge://extensions</code>）</li>
+                        <li>开启右上角 <strong>开发者模式</strong></li>
+                        <li>点击 <strong>加载已解压的扩展程序</strong> → 选择解压后的文件夹</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Labels Section -->
+    <section class="section" id="labels">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Labels / 标签颜色</span>
+                <h2 class="section-title">Color-coded results<br>at a glance</h2>
+            </div>
+            <div class="labels-table-wrap">
+                <table class="labels-table">
+                    <thead>
+                        <tr>
+                            <th>Label / 标签</th>
+                            <th>Color / 颜色</th>
+                            <th>Preview</th>
+                            <th>Meaning / 含义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Official 官网</strong></td>
+                            <td><code>#22c55e</code></td>
+                            <td><span class="label-dot" style="background:#22c55e"></span></td>
+                            <td>Likely an official site (HTTPS + short path) / 大概率是官网</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Baijiahao 百家号</strong></td>
+                            <td><code>#f97316</code></td>
+                            <td><span class="label-dot" style="background:#f97316"></span></td>
+                            <td>Baidu self-media / content farm / 百度自媒体</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ad 广告</strong></td>
+                            <td><code>#ef4444</code></td>
+                            <td><span class="label-dot" style="background:#ef4444"></span></td>
+                            <td>Sponsored / paid placement / 赞助推广位</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Video 视频</strong></td>
+                            <td><code>#a855f7</code></td>
+                            <td><span class="label-dot" style="background:#a855f7"></span></td>
+                            <td>Video platform result / 视频平台结果</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scholar 学术</strong></td>
+                            <td><code>#0ea5e9</code></td>
+                            <td><span class="label-dot" style="background:#0ea5e9"></span></td>
+                            <td>Academic / paper source / 学术论文来源</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Forum 论坛</strong></td>
+                            <td><code>#9ca3af</code></td>
+                            <td><span class="label-dot" style="background:#9ca3af"></span></td>
+                            <td>Community / Q&A site / 社区问答站点</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Unknown 未知</strong></td>
+                            <td><code>#d1d5db</code></td>
+                            <td><span class="label-dot" style="background:#d1d5db; border:1px solid #e5e7eb;"></span></td>
+                            <td>Does not match any category / 不匹配任何分类</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Highlight 高亮</strong></td>
+                            <td><code>#fde047</code></td>
+                            <td><span class="label-dot" style="background:#fde047; border:1px solid #f59e0b;"></span></td>
+                            <td>Background color for keyword hits / 关键词命中背景色</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="labels-note">Every color can be overridden in the options page. Changes apply immediately.<br>每种颜色都能在选项页覆盖修改，改动即时生效。</p>
+        </div>
+    </section>
+
+    <!-- Permissions Section -->
+    <section class="section section-alt" id="permissions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Privacy / 隐私</span>
+                <h2 class="section-title">Respectfully minimal<br>permissions</h2>
+            </div>
+            <div class="privacy-grid">
+                <div class="privacy-card">
+                    <div class="privacy-icon">🛡️</div>
+                    <h3>storage</h3>
+                    <p>Saves your settings and custom rules <strong>locally only</strong>.<br>仅本地保存你的设置和自定义规则。</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-icon">🔒</div>
+                    <h3>No Remote Code</h3>
+                    <p>Zero remote code execution. Everything runs offline.<br>零远程代码，全部离线运行。</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-icon">👁️</div>
+                    <h3>No Tracking</h3>
+                    <p>No analytics, no telemetry, no host permissions.<br>无分析、无遥测、无 host_permissions。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Ready to clean up your search?</h2>
+                <p>Download the latest release and start using Search Enhancer in minutes.<br>下载最新版本，几分钟内开始使用。</p>
+                <div class="cta-actions">
+                    <a href="https://github.com/rainbowcrr-sys/search-enhancer/releases" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                        Download Latest / 下载最新版
+                    </a>
+                    <a href="https://github.com/rainbowcrr-sys/search-enhancer" target="_blank" rel="noopener" class="btn btn-secondary btn-large">
+                        View Source / 查看源码
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-icon">🔍</span>
+                    <span class="logo-text">Search Enhancer</span>
+                    <p class="footer-desc">A browser extension for cleaner, faster search results.<br>让搜索结果更干净、更快的浏览器插件。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Project / 项目</h4>
+                    <a href="https://github.com/rainbowcrr-sys/search-enhancer" target="_blank" rel="noopener">GitHub Repository</a>
+                    <a href="https://github.com/rainbowcrr-sys/search-enhancer/releases" target="_blank" rel="noopener">Releases / 发布</a>
+                    <a href="https://github.com/rainbowcrr-sys/search-enhancer/issues" target="_blank" rel="noopener">Issues / 问题反馈</a>
+                </div>
+                <div class="footer-links">
+                    <h4>People / 团队</h4>
+                    <a href="https://github.com/rainbowcrr-sys" target="_blank" rel="noopener">@rainbowcrr-sys (Maintainer)</a>
+                    <a href="https://github.com/malerror-w" target="_blank" rel="noopener">@malerror-w (Co-author)</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Search Enhancer · MIT License</span>
+                <span>Made with ❤️ for cleaner search</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
